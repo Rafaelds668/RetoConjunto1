@@ -21,7 +21,7 @@
       </Label>
    </top>
    <bottom>
-      <Label text="info" BorderPane.alignment="CENTER" />
+      <Label fx:id="info" text="info" BorderPane.alignment="CENTER" />
    </bottom>
    <center>
       <AnchorPane prefHeight="472.0" prefWidth="413.0" BorderPane.alignment="CENTER">

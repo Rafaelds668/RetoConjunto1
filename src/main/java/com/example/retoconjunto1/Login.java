@@ -10,23 +10,16 @@ import java.io.IOException;
 
 public class Login extends Application {
 
-   private static Stage stage;
-
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        stage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("Login"));
-        primaryStage.setTitle("Login");
-        primaryStage.setScene(new Scene(root, 600,400));
-        primaryStage.show();
-    }
+    public void start(Stage stage) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Login.class.getResource("Login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 500, 600);
+        stage.setTitle("Login");
+        stage.setScene(scene);
+        stage.show();
 
-    public void checkLogin(String fxml) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource(fxml));
-        stage.getScene().setRoot(root);
     }
-
-    public static void main(String[] args) {
+        public static void main(String[] args) {
         launch(args);
     }
 }
